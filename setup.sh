@@ -98,5 +98,5 @@ echo "Successfully created Azure service principal and uploaded the credentials 
 echo "********************"
 
 
-echo "Setup completed. Launch Azure ML Studio by visiting the link: https://ml.azure.com"
+echo "Setup completed. Launch Azure ML Studio by visiting the link: http://ml.azure.com/"
 echo
