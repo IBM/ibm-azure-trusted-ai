@@ -61,6 +61,7 @@ STEP4="Step 4: Deploying Azure ML Compute Instance..."
 echo $STEP4
 echo
 echo "For installation details, check 'logs.txt' file..."
+echo "This step will take approx. 10min... please be patient"
 echo
 echo $STEP4 >> logs.txt
 az ml computetarget create computeinstance  -n techzone -s "STANDARD_A1_V2" -v -w trusted-ai-dev -g $RG --only-show-errors >> logs.txt
@@ -79,7 +80,7 @@ echo
 echo "For installation details, check 'logs.txt' file..."
 echo
 az storage file upload --account-name $STORAGEACCOUNT --account-key $STORAGEACCOUNTKEY --share-name $FILESHARE --path Credit-risk-model.ipynb --source notebooks/Credit-risk-model.ipynb --only-show-errors >> logs.txt
-az storage file upload --account-name $STORAGEACCOUNT --account-key $STORAGEACCOUNTKEY --share-name $FILESHARE --path Drift-Detection-model.ipynb --source notebooks/Drift-Detection-model.ipynb --only-show-errors >> logs.txt
+az storage file upload --account-name $STORAGEACCOUNT --account-key $STORAGEACCOUNTKEY --share-name $FILESHARE --path Drift-Detection-Model.ipynb --source notebooks/Drift-Detection-Model.ipynb --only-show-errors >> logs.txt
 echo "Successfully uploaded the notebooks"
 echo "********************"
 
