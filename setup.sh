@@ -52,7 +52,6 @@ echo
 echo "For installation details, check 'logs.txt' file..."
 echo
 echo $STEP3 >> logs.txt
-az extension remove -n ml --only-show-errors >> logs.txt
 az extension add -n azure-cli-ml --only-show-errors >> logs.txt
 echo "Successfully setup Azure ML CLI"
 echo "********************"
