@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "eastus2"
+        },
+        "workspaceName": {
+            "value": "trusted-ai-dev"
+        },
+        "resourceGroupName": {
+            "value": "trusted-ai"
+        },
+        "sku": {
+            "value": "Basic"
+        },
+        "tagValues": {
+            "value": {}
+        },
+        "keyVaultName": {
+            "value": "trustedaidev2782589213"
+        },
+        "storageAccountName": {
+            "value": "trustedaidev7281052313"
+        },
+        "applicationInsightsName": {
+            "value": "trustedaidev3520744313"
+        },
+        "softDeleteEnabled": {
+            "value": "true"
+        },
+        "storageAccountOption": {
+            "value": "new"
+        },
+        "storageAccountHnsEnabled": {
+            "value": false
+        },
+        "keyVaultOption": {
+            "value": "new"
+        },
+        "applicationInsightsOption": {
+            "value": "new"
+        },
+        "identityType": {
+            "value": "systemAssigned"
+        },
+        "publicNetworkAccess": {
+            "value": "Enabled"
+        }
+    }
+}
