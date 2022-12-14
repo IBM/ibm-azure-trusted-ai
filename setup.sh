@@ -6,7 +6,6 @@ echo "Setting up Trusted AI demo on TechZone..."
 echo "********************"
 az extension add -n account --only-show-errors > logs.txt
 SUBSCRIPTIONID=$(az account subscription list --only-show-errors | python3 -c "import sys, json; print(json.load(sys.stdin)[0]['subscriptionId'])")
-echo "********************"
 echo "Subscription ID:" 
 echo $SUBSCRIPTIONID
 echo "********************"
