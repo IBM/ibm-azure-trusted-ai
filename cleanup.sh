@@ -1,4 +1,6 @@
-echo "Cleaning up resources...\n"
+echo "Cleaning up resources..."
+echo
 RG="trusted-ai"
 az group delete --name $RG
-echo "Resources cleaned up successfully\n"
+echo "Resources cleaned up successfully"
+echo
