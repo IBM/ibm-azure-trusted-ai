@@ -18,13 +18,13 @@
             "value": {}
         },
         "keyVaultName": {
-            "value": "trustedaidev2782589217"
+            "value": "trustedaidev2782589218"
         },
         "storageAccountName": {
-            "value": "trustedaidev7281052317"
+            "value": "trustedaidev7281052318"
         },
         "applicationInsightsName": {
-            "value": "trustedaidev3520744317"
+            "value": "trustedaidev3520744318"
         },
         "softDeleteEnabled": {
             "value": "true"
