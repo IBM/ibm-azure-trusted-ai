@@ -86,7 +86,7 @@ Now that you have setup all the resources on Azure, you can start the data scien
 
 - The first block required IBM Cloud API Key. Update the `CLOUD_API_KEY` variable with IBM Cloud API Key.
 
-<details><summary>How to generate IBM Cloud API Key?</summary>
+<details><summary><b>How to generate IBM Cloud API Key?</b></summary>
 
 - Login to IBM Cloud.
 - Goto **[Manage > Access (IAM)](https://cloud.ibm.com/iam/overview)**.
@@ -99,7 +99,7 @@ Now that you have setup all the resources on Azure, you can start the data scien
 
 - Second block requires IBM Cloud Object Storage API Key, Resource CRN and URL. Update `COS_API_KEY_ID`, `COS_RESOURCE_CRN` & `COS_ENDPOINT` variables.
 
-<details><summary>How to get Cloud Object Storage Credentials?</summary>
+<details><summary><b>How to get Cloud Object Storage Credentials?</b></summary>
 
 - Create a free [Object Storage](https://cloud.ibm.com/objectstorage/create) on IBM Cloud.
 
