@@ -10,13 +10,13 @@ echo "Subscription ID:"
 echo $SUBSCRIPTIONID
 echo "********************"
 
-RG="trusted-ai-dev"
+RG="trusted-ai"
 echo "Resource Group:"
 echo $RG
 echo "********************"
 
 # 1. Deploy Resource Group Template
-STEP1="Step 1: Creating Resource Group 'trusted-ai-dev'..."
+STEP1="Step 1: Creating Resource Group 'trusted-ai'..."
 echo $STEP1
 echo
 echo "For installation details, check 'logs.txt' file..."
@@ -41,7 +41,7 @@ az deployment group create \
 --resource-group $RG \
 --template-file azure-ml/template.json \
 --parameters azure-ml/parameters.json --only-show-errors >> logs.txt
-echo "Successfully created Azure Machine Learning workspace 'dev-workspace'"
+echo "Successfully created Azure Machine Learning workspace 'trusted-ai-dev'"
 echo "********************"
 
 # 3. Add Azure ML plugin to AZ CLI
@@ -63,7 +63,7 @@ echo "For installation details, check 'logs.txt' file..."
 echo "This step will take approx. 10min... please be patient"
 echo
 echo $STEP4 >> logs.txt
-az ml computetarget create computeinstance  -n techzone -s "STANDARD_A1_V2" -v -w dev-workspace -g $RG --only-show-errors >> logs.txt
+az ml computetarget create computeinstance  -n techzone -s "STANDARD_A1_V2" -v -w trusted-ai-dev -g $RG --only-show-errors >> logs.txt
 echo "Successfully created Azure ML Compute Instance 'techzone'."
 echo "********************"
 

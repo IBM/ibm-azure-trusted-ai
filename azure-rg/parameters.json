@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "rgName": {
-            "value": "trusted-ai-dev"
+            "value": "trusted-ai"
         },
         "rgLocation": {
             "value": "eastus"

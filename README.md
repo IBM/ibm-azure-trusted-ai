@@ -131,10 +131,139 @@ Now that you have setup all the resources on Azure, you can start the data scien
 
 - Run the entire Notebook to learn about the credit risk model that is built & deployed in Azure Machine Learning Studio. Also learn about setting up fairness, quality, drift & explainability monitors in Watson OpenScale using SDKs in notebook.
 
+At this point, you have completed the activities of a Data Scientist.
+
 ### Step 3: Monitor the credit risk model in Watson Openscale
+
+You will now see how Watson OpenScale is going to answer the problems of a CIO persona.
+
+CIO persona Struggles with the challenge of bias in the models outcome. If a model has bias in it and it is put in production, then there are going to be a lot of repercussions, financially and reputational.
+
+You will not put on the hat of a CIO persona.
 
 - Launch the [OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/).
 
+- You should see the `azure-credit-risk-model` registered in OpenScale Dashboard.
+
+    ![wos-1](doc/src/images/wos-1.png)
+
+- Select the model to view the Explaination Summary, Fairness Test, Quality Test & Drift Test.
+
+    ![wos-2](doc/src/images/wos-2.png)
+
+#### Evaluation Summary
+
+The evaluation summary screen presents the test results from the latest evaluation.
+
+![evaluation-summary](doc/src/images/evaluation-summary.jpg)
+
+#### Fairness Test
+
+Fairness describes how evenly the model delivers favourable outcomes between groups. The metrices section presents results for the evaluation.
+
+![fairness](doc/src/images/fairness-monitor.png)
+
+You can click on the small arrow mark on the top right of the Fairness monitor to view evaluation details.
+
+![fairness-1](doc/src/images/fairness-1.png)
+
+You can see the two features `Age` & `Sex` that are being monitored to check for bias. These features were set by the Data Scientist persona back in the Azure Machine Learning Studio.
+
+<details><summary><b>View Azure Machine Learning Studio where these parameters were set for monitoring</b></summary>
+
+![azure-code-block](doc/src/images/azure-codeblock.png)
+
+</details>
+
+>Note: Watson OpenScale can also analyze the training data to recommend which feature should be monitored.
+
+The dashboard shows graph that of all the transactions. You can click on any data point to view more details about how the disparate impact score was determined.
+
+![fairness-2](doc/src/images/fairness-2.png)
+
+As a CIO persona, you will observe this disparate impact, Favorable outcomes and the bias if any and report it as a feedback to the Data Scientist persona. The Data Scientist will work on mitigating the bias of the model.
+
+#### Quality Test
+
+Quality describes the models ability to provide correct outcomes based on labeled test data called feedback data.
+
+![quality](doc/src/images/quality-monitor.png)
+
+You can click on the small arrow mark on the top right of the Quality monitor to view evaluation details.
+
+There are 9 different metrices that can be set for Quality Test. As a Data Scientist you have configured the `Area Under ROC` back in the Azure Machine Learning Studio.
+
+<details><summary><b>View Azure Machine Learning Studio where this parameter was configured</b></summary>
+
+![azure-code-block2](doc/src/images/azure-codeblock2.png)
+
+</details>
+
+![quality](doc/src/images/quality-1.png)
+
+You can see Area under ROC violation of 0.11 that is 11%. Click on the data point to view the confusion matrix.
+
+![confusion-matrix](doc/src/images/confusion-matrix.png)
+
+#### Drift Test
+
+Drift warns of drop in accuracy or data consistency. If the accuracy of the model decreases then it is considered as **drop in accuracy**. If the data is very different from the training data then it is considered as **Drop in data consistency**.
+
+![drift](doc/src/images/drift-monitor.png)
+
+You can click on the small arrow mark on the top right of the Drift monitor to view evaluation details.
+
+![drift](doc/src/images/drift.png)
+
+The drift monitor estimates the drop in accuracy of the model and the drop in data consistency based on the training data. Click on a data point to view details.
+
+![drift3](doc/src/images/drift-3.png)
+
+You can view the transactions responsible for a drop in accuracy, a drop in data consistency, or both. Click on a group to view reason for drop in accuracy/drop in data consistency along with Recommendation that is in Natural Language that can be understood by anyone.
+
+![drift4](doc/src/images/drift-4.png)
+
+The model can be retrained to eleminate the model and data drifts.
+
+#### Explainability
+
+Explainability is the model's ability to describe how the model arrived at a perticular prediction.
+
+Click on the **Find a Transaction** button on the left panel. Select the deoloyed model `azure-credit-risk-model`. You will see the list of all the transactions. You can click on **Explain** to view explaination of a perticular transaction.
+
+![explain-1](doc/src/images/explain-1.png)
+
+You can see the features that have influenced the prediction. The features are sorted by their importance in influencing the models prediction.
+
+![explain-2](doc/src/images/explain-2.png)
+
+You can Inspect the models behaviour to explore how changing feature values will influence model outcomes. A hypothetical transaction presents a different set of feature values that results in a different outcome.
+
+![explain-3](doc/src/images/explain-3.png)
+
+Suppose a customer who has not got a loan and he/she wishes to know what do they have to improve in order to become eligable for the loan, can be analyzed using the Inspect feature of the Explainability monitor.
+
+![explain-4](doc/src/images/explain-4.png)
+
+By using this feature, Watson OpenScale can analyze the model and provide a suggestion.
+
+### Step 4: Cleanup Resources
+
+Now that you have successfully completed the exercise, you can go ahead and clean up the resources on Azure.
+
+- Launch the Azure Cloud Shell from the Microsoft Azure Dashboard.
+
+- Go to the cloned directory by running the following command.
+
+    ```
+    cd ibm-azure-trusted-ai/
+    ```
+
+- In the cloned directory, run the cleanup script to delete resources on your Azure Subscription.
+
+    ```
+    ./cleanup.sh
+    ```
 
 ## Summary
 
