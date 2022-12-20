@@ -6,10 +6,10 @@
             "value": "eastus2"
         },
         "workspaceName": {
-            "value": "trusted-ai-dev"
+            "value": "dev-workspace"
         },
         "resourceGroupName": {
-            "value": "trusted-ai"
+            "value": "trusted-ai-dev"
         },
         "sku": {
             "value": "Basic"
@@ -18,13 +18,13 @@
             "value": {}
         },
         "keyVaultName": {
-            "value": "trustedaidev2782589219"
+            "value": "trustedaidev2782589220"
         },
         "storageAccountName": {
-            "value": "trustedaidev7281052319"
+            "value": "trustedaidev7281052320"
         },
         "applicationInsightsName": {
-            "value": "trustedaidev3520744319"
+            "value": "trustedaidev3520744320"
         },
         "softDeleteEnabled": {
             "value": "true"
