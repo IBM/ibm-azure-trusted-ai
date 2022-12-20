@@ -6,6 +6,8 @@ Build and Deploy machine learning models in Azure Machine Learning Studio and Mo
 
 State the purpose of your tutorial, your intended audience, and the benefits readers can gain from it. Aim to grab the reader’s interest quickly, using terms they are likely to search on and relate to.
 
+![architecture](doc/src/images/architecture.png)
+
 ## Use case Scenario
 
 Consider a financial services company which is interested in expanding loan offerings to a broader audiance. To avoid costly lending mistakes, the organization decides to make use of Artificial Intelligence to process loan applications. You will experience a Data Scientist persona where you will build & deploy machine learning models in Azure machine learning studio using Azure Services to predict risk level for each loan applicant. You will also experience a CIO & customer care personas where you will monitor the machine learning models in Watson OpenScale. Watson OpenScale will help you determine if the model is providing fair and accurate predictions.
@@ -264,6 +266,8 @@ Now that you have successfully completed the exercise, you can go ahead and clea
     ```
     ./cleanup.sh
     ```
+
+    ![cleanup](doc/src/images/cleanup.png)
 
 ## Summary
 
