@@ -20,6 +20,14 @@ It will take approximately 1 hour to complete the steps under normal circumstanc
 
 ## Steps
 
+### Step 0: Create a Watson OpenScale Instance on IBM Cloud
+
+You can create a free OpenScale account on IBM Cloud by following the steps below.
+- Login to [IBM Cloud](https://cloud.ibm.com/).
+- Create a Free [OpenScale Instance](https://cloud.ibm.com/catalog/services/watson-openscale) by choosing the Lite plan.
+
+At this point you have successfully created an OpenScale Instance that will be used to monitor model built and deployed in Azure Machine Learning.
+
 ### Step 1: Setup Microsoft Azure Resources
 
 >Note: You will get access to Microsoft Azure Subscription through the IBM TechZone.
@@ -125,7 +133,8 @@ Now that you have setup all the resources on Azure, you can start the data scien
 
 ### Step 3: Monitor the credit risk model in Watson Openscale
 
-In progress ....
+- Launch the [OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/).
+
 
 ## Summary
 
