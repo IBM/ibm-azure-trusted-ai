@@ -1,12 +1,18 @@
 # IBM-Azure Trusted AI Use case
 
-Build and Deploy machine learning models in Azure Machine Learning Studio and Monitor them in Watson OpenScale
+Build and Deploy machine learning models in Azure Machine Learning Studio and Monitor them in Watson OpenScale.
 
 ## Introduction
 
-State the purpose of your tutorial, your intended audience, and the benefits readers can gain from it. Aim to grab the reader’s interest quickly, using terms they are likely to search on and relate to.
+The organisations are at different level of AI and ML maturity. They want to operationalize AI but they lack the right set of tools to create that trust. There are challenges from different personas in a organization. Data Scientist struggles with trying to detect bias in the model, they also face challenges related to finding the right set of tools to show accuracy or drifts. From a CIO persona there is a need to ensure that the model is not biased on protected data like age, gender, disability, because the liability an organisation would have to incur in case of such a bias would not only be financial, but also reputational. Also in typical FSS Industry there is a need to explain each transaction for auditing purposes. For a customer the challenges are different. For example, a loan applicant would like to know why a negative prediction was made. And this is where the call centre executive basically struggle to give them a reasoning because most of the models are black boxes. Precisely this is where IBM Watson OpenScale comes into the picture because it helps ensure that the models remain fair, explainable and compliant. Not only that, it is a single solution that allows model monitoring across a multi cloud environment. The models can be hosted in Azure ML or a different hyperscaler, even open source models for that matter, and OpenScale can monitor the models seamlessly.
+
+## Architecture
 
 ![architecture](doc/src/images/architecture.png)
+
+For the purpose of the demo, this is the component architecture that we will be working on. There are three phases Build, Deploy & Monitor.
+
+The Build phase essentially works on Azure Storage account, where it makes use of Azure Files Shares to store the datasets along with Azure Machine Learning Studio to build machine learning models with Jupyter Notebooks for Code Approach and Automated ML or Designer for no-code approach. Once that is complete, Azure Machine Learning Studio is again leveraged for the deploy phase where model is deployed as a web service in Azure Machine Learning Studio. Finally, IBM Watson OpenScale configured on IBM Cloud Pak for Data provisioned on Microsoft Azure is going to monitor the four key KPIs that are Fairness, Quality, Drift and Explainability.
 
 ## Use case Scenario
 
@@ -19,6 +25,10 @@ Consider a financial services company which is interested in expanding loan offe
 ## Estimated time
 
 It will take approximately 1 hour to complete the steps under normal circumstances.
+
+## Video
+
+Coming soon!
 
 ## Steps
 
@@ -271,8 +281,12 @@ Now that you have successfully completed the exercise, you can go ahead and clea
 
 ## Summary
 
-State any closing remarks about the task or goal you described and its importance. Reiterate specific benefits the reader can expect from completing your tutorial. Recommend a next step (with link if possible) where they can continue to expand their skills after completing your tutorial.
+In this exercise, you experienced the Data Scientist persona's roles i.e. you built and deployed a Machine Learning Model to predict credit risk using Azure Machine Learning Services. You also experienced the CIO and Customer care personas where you monitored the four KPIs i.e. Fairness, Quality, Drift & Explainability using IBM Watson OpenScale. 
+
+To Summarise, The solution helps in solving the technical and business problems that were highlighted in the introduction. The Data Scientist now has the visibility to monitor model performance, even once they are put in production, and there by reduce the cost due to the early detection of drop in accuracy if detected. The CIO and CDO are now able to detect biasis and they feel confident to use AI as it is fair and auditable. Finally the customer, in this case the loan applicant is provided with more feedback and the call center executives have the right set of tools i.e. the explainability monitor that explains why a loan was not granted and also using the what if analysis, OpenScale highlights, changing which feature would result in a different outcome.
 
 ## Related links
 
-Include links to other resources that may be of interest to someone who is reading your tutorial.
+- [OpenScale Python SDKs 3.0.26](http://ibm-watson-openscale-client.mybluemix.net/)
+- [Mitigating bias](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-insight-debias.html?audience=wdp)
+- [Custom ML frameworks](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-frameworks-custom.html)
